@@ -1,5 +1,6 @@
 <?php
-  echo "hello world";
+    echo "hello world";
+    echo getenv('PHP_ENV');
 ?>
 
 <!DOCTYPE html>
