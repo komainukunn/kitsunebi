@@ -49,7 +49,7 @@
 		</section>
 		<section class="center">
 			<div class="slogan">
-				道無き道を照らす灯火となれ
+				道無き道を照らす</br>灯火となれ
 			</div>
 		</section>
 		<section class="bottom">
