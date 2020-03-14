@@ -16,26 +16,27 @@
   crossorigin="anonymous">
 </script>
 
-		<!-- meta -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-		
-		<!-- google fonts -->
-		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic"/>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic"/>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
-		
-		<!-- css -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
+<!-- meta -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<!-- google fonts -->
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic"/>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
+
+<!-- css -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
 
 </head>
 <body>
 
+<div id="wrapper">
 <div id="header" class="content-block header-wrapper">
 	<div class="header-wrapper-inner">
 		<section class="top clearfix">
@@ -59,10 +60,79 @@
 	</div>
 </div><!-- header -->
 
+<div class="content-block" id="portfolio">
+	<div class="container">
+		<header class="block-heading cleafix">
+			<h1>ギルド紹介</h1>
+			<p>メイプルストーリーM かりんサーバーで活動している『きつねび』をご紹介させていただきます。</p>
+		</header>
+		<section class="block-body">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#services" class="recent-work" style="background-image:url(assets/images/overview_thumb.jpg)">
+						<span class="btn btn-o-white">概要</span>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" class="recent-work" style="background-image:url(assets/images/activity_thumb.jpg)">
+						<span class="btn btn-o-white">活動</span>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" class="recent-work" style="background-image:url(assets/images/gallery_thumb.jpg)">
+						<span class="btn btn-o-white">ギャラリー</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</div><!-- #portfolio -->
 
-    <script>
-        $(function(){
-        });
-    </script>
+<div class="content-block parallax" id="services">
+	<div class="container text-center">
+		<header class="block-heading cleafix">
+			<h1>概要</h1>
+			<p>きつねびは、非常にゆるいギルドです。ガチガチな要塞戦や遠征に疲れてしまった方や初心者に優しいギルドを目指しています。</p>
+		</header>
+		<section class="block-body">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="service">
+						<i class="fa fa-bolt"></i>
+                        <h2>要塞戦</h2>
+						<p>要塞戦は行いません！その時間は、自由にメイプルしたり、他の事をやったりしています。気まぐれで行う時もあります笑</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service">
+						<i class="fa fa-heart-o"></i>
+						<h2>遠征</h2>
+						<p>特に縛りはありません。各自で行くこともあれば、集まって行く場合もあります。みんなマイペースにやっています！</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service">
+						<i class="fa fa-bell-o"></i>
+						<h2>バンケット</h2>
+                        <p>2日に1回 22時30分より行っています。前半の15分ぐらいはギルドアジト内で雑談しており、後半の15分はスクリーンショットを取りに遠足へ行ったり、クイズ大会などの企画を行っています！！</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div><!-- #services -->
+
+</div><!--/#wrapper-->
+
+<script src="assets/js/jquery-2.1.3.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.actual.min.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+    $(function(){
+    });
+</script>
 </body>
 </html>

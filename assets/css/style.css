@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #services {
-	background-image: url(../images/traffic.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url(../images/overview_bg.png);
 	color: white;
 }
 #parallax {
@@ -341,7 +341,8 @@ h1, h2, h3, h4, h5, h6{
 ///////////////////////////////////////////////////////////////////////*/
 
 #services h1, #services h2{
-	color: white;
+    margin-top: 8px;
+    color: white;
 }
 .service i {
     font-size: 60px;
