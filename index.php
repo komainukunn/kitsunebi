@@ -74,12 +74,12 @@
 					</a>
 				</div>
 				<div class="col-sm-4">
-					<a href="#" class="recent-work" style="background-image:url(assets/images/activity_thumb.jpg)">
+					<a href="#blog" class="recent-work" style="background-image:url(assets/images/activity_thumb.jpg)">
 						<span class="btn btn-o-white">活動</span>
 					</a>
 				</div>
 				<div class="col-sm-4">
-					<a href="#" class="recent-work" style="background-image:url(assets/images/gallery_thumb.jpg)">
+					<a href="#parallax" class="recent-work" style="background-image:url(assets/images/gallery_thumb.jpg)">
 						<span class="btn btn-o-white">ギャラリー</span>
 					</a>
 				</div>
@@ -121,6 +121,62 @@
 		</section>
 	</div>
 </div><!-- #services -->
+
+<div class="content-block" id="blog">
+	<div class="container">
+		<header class="block-heading cleafix">
+			<h1>活動紹介</h1>
+			<p>主にバンケットの様子を紹介します。</p>
+		</header>
+		<section class="block-body">
+			<div class="row">
+				<div class="col-sm-4 blog-post">
+					<img src="assets/images/activity_1.png">
+					<h2>雑談</h2>
+					<p>前半15分では、雑談しつつメンバーが揃うのを待ちます。通常のバンケットを行っているようなイメージです。</p>
+				</div>
+				<div class="col-sm-4 blog-post">
+					<img src="assets/images/activity_2.jpg">
+					<h2>遠足</h2>
+					<p>ギルドアジトを抜け出しスクリーンショットを取りに行くのが遠足です。また遠足先マップのBGMを聞くことも醍醐味になっています。決め方は、ギルドメンバーが気に入ってる場所だったり、気まぐれで決めたり、ほとんどノリで決めてます笑</p>
+				</div>
+				<div class="col-sm-4 blog-post">
+					<img src="assets/images/activity_3.png">
+					<h2>その他企画</h2>
+					<p>遠足以外の事をやりたい時に、クイズ大会やエオス塔レースなどの企画を差し込みで行います。画像はエオス塔レースを行った際の写真です。終わった後は皆ヘトヘトでした笑</p>
+				</div>
+			</div>
+		</section>
+	</div>
+</div><!-- #blog -->
+
+<div class="content-block parallax" id="parallax">
+	<div class="container text-center">
+		<h1>ギャラリー</h1>
+<a class="twitter-timeline" href="https://twitter.com/komainu_maple/lists/list?ref_src=twsrc%5Etfw">A Twitter List by komainu_maple</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div><!-- #parallax -->
+
+<div class="content-block" id="testimonials">
+	<div class="container">
+		<header class="block-heading cleafix">
+			<h1>コンタクト</h1>
+			<p>下記のツイッターアカウントまでご連絡ください。</p>
+		</header>
+		<section class="block-body">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="testimonial">
+						<img src="assets/images/koma.jpg">
+						<br />
+						<strong>こまいぬkunn</strong><br/>
+						<span><a href="https://twitter.com/komainu_maple">@komainu_maple</a></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div><!-- /#testimonials -->
 
 </div><!--/#wrapper-->
 

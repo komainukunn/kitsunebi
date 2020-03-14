@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #header.header-wrapper {
-	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-bg.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-bg.png);
 	background-size: cover;
 	display: table;
 	height: 80vh;
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .block-body {
-	margin-top: 60px;
+	margin-top: 10px;
 }
 
 #services {
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6{
 	color: white;
 }
 #parallax {
-	background-image: url(../images/blue_mac2.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .7)), url(../images/gallery_bg.jpg);
 	color: white;
 }
 #contact {
