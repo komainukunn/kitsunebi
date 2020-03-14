@@ -6,3 +6,5 @@ Icon
 
 ### docker ###
 docker-compose.yaml
+nginx/
+php/

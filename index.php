@@ -1,3 +1,7 @@
+<?php
+  echo "hello world";
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,6 +26,8 @@
 </head>
 <body>
 
+
+てすと
     <script>
         $(function(){
         });
