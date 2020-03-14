@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6{
 	background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/header-bg.jpg);
 	background-size: cover;
 	display: table;
-	height: 100vh;
+	height: 80vh;
 	width: 100%;
 	position: relative;
 	z-index: 1;
