@@ -2,16 +2,13 @@
     if(empty(getenv('PHP_TEST'))){
         require('config.php');
     }
-    echo "hello world test";
-    echo getenv('PHP_TEST');
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet"  href="style.css">
-<title>タイトル</title>
+<title>きつねび</title>
 <!-- jQuery -->
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -19,19 +16,50 @@
   crossorigin="anonymous">
 </script>
 
-<!-- Bootstrap -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-
-<!-- Font Awesome  -->
-<script src="https://kit.fontawesome.com/f8cace7997.js" crossorigin="anonymous"></script>
+		<!-- meta -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<!-- google fonts -->
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+Sans:regular,italic,bold,bolditalic"/>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nixie+One:regular,italic,bold,bolditalic"/>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
+		
+		<!-- css -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
 
 </head>
 <body>
 
+<div id="header" class="content-block header-wrapper">
+	<div class="header-wrapper-inner">
+		<section class="top clearfix">
+			<div class="pull-left">
+				<h1><a class="logo" href="index.html">きつねび</a></h1>
+			</div>
+			<div class="pull-right">
+				<!-- <a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a> -->
+			</div>
+		</section>
+		<section class="center">
+			<div class="slogan">
+				道無き道を照らす灯火となれ
+			</div>
+		</section>
+		<section class="bottom">
+			<a id="scrollToContent" href="#">
+				<img src="assets/images/arrow_down.png">
+			</a>
+		</section>
+	</div>
+</div><!-- header -->
 
-てすとです
+
     <script>
         $(function(){
         });
