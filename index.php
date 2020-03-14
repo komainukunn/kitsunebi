@@ -1,4 +1,7 @@
 <?php
+    if(empty(getenv('PHP_TEST'))){
+        require('config.php');
+    }
     echo "hello world test";
     echo getenv('PHP_TEST');
 ?>
