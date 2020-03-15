@@ -174,13 +174,11 @@
 		</header>
 		<section class="block-body">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="testimonial">
-						<img src="assets/images/koma.jpg">
-						<br />
-						<strong>こまいぬkunn</strong><br/>
-						<span><a href="https://twitter.com/komainu_maple">@komainu_maple</a></span>
-					</div>
+				<div class="testimonial">
+					<img src="assets/images/koma.jpg">
+					<br />
+					<strong>こまいぬkunn</strong><br/>
+					<span><a href="https://twitter.com/komainu_maple">@komainu_maple</a></span>
 				</div>
 			</div>
 		</section>
