@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6{
     background-position: center;
 	background-size: cover;
 	display: table;
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
 	position: relative;
 	z-index: 1;
@@ -199,6 +199,12 @@ h1, h2, h3, h4, h5, h6{
 }
 #header .bottom a:hover {
     opacity: 1;
+}
+
+#ytPlayerWrap{
+  position: relative;
+  height: 500px;
+  width: 100%;
 }
 
 
@@ -366,6 +372,10 @@ h1, h2, h3, h4, h5, h6{
 #blog .date {
     margin-bottom: 15px;
     font-style: italic;
+}
+
+.blog-post h2{
+    margin-top:10px;
 }
 
 
