@@ -1,3 +1,37 @@
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #000000;
+    z-index: 9999;
+}
+.animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: loadinganimation 3000ms ease-out forwards infinite;
+    animation: loadinganimation 3000ms ease-out forwards infinite;
+}
+@keyframes loadinganimation {
+  from,to {
+    opacity: 0;
+}
+  50% {
+    opacity: 1;
+  }
+}
+
+html, body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-y: none;
+}
+
 .header__movie{
     height:100vh;
     position: relative;
@@ -72,4 +106,85 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* 表示アニメーション */
+
+/* 下からフェードイン*/
+.fadein-bottom{
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  /* opacity: 0; */
+}
+.fadein-bottom.active{
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  /* opacity: 1; */
+}
+
+/* 左からフェードイン*/
+.fadein-left{
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+  -webkit-transform: translateX(-1000px);
+  -moz-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  transform: translateX(-1000px);
+  /* opacity: 0; */
+}
+.fadein-left.active{
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  /* opacity: 1; */
+}
+
+/* 右からフェードイン*/
+.fadein-right{
+  -webkit-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear;
+  -webkit-transform: translateX(1000px);
+  -moz-transform: translateX(1000px);
+  -ms-transform: translateX(1000px);
+  transform: translateX(1000px);
+  /* opacity: 0; */
+}
+.fadein-right.active{
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  /* opacity: 1; */
+}
+
+/*左から文字を出す*/
+.text-fadein p{
+  display: inline-block;
+  position: relative;
+}
+.text-fadein p:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  -webkit-transition: all .6s linear;
+  -o-transition: all .6s linear;
+  transition: all .6s linear;
+}
+.text-fadein.active p:before {
+  width: 0%;
 }

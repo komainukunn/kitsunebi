@@ -2,6 +2,17 @@
     if(empty(getenv('PHP_TEST'))){
         require('config.php');
     }
+    
+    /* ローディング画面 画像選定 */
+    $loadImageList = glob('./assets/images/loading/*.*');
+    if(count($loadImageList) <= 1){
+        $loadImage = $loadImageList[0];
+    }else{
+        $loadImage = $loadImageList[mt_rand(1,count($loadImageList))-1];
+    }
+
+    $galleryList = glob('./assets/images/gallery/*.*'); 
+
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +50,29 @@
 </head>
 <body>
 
+<div class="loading">
+<div class="animation"><img src="<?php echo $loadImage;?>"></div>
+</div>
+<div id="backMovie" data-property="{
+    videoURL:'3tpSYpwoy8Y',
+    containment:'body', 
+    showControls:false, 
+    autoPlay:true, 
+    loop:true, 
+    mute:true, 
+    startAt:0, 
+    stopAt: 35,
+    opacity:1, 
+    addRaster:true, 
+    quality:'default',
+    onReady: function(player){
+            $('.loading').hide();
+            $('html,body').css('overflow-y','visible');
+        }
+    }">My video01</div>
 <div>
     <div>
-        <div class="header__movie">
+        <div class="header__movie" style="height:100vh">
             <div class="header__message">
                 <div class="header__message__title">
                     <h2>きつねび</h2>
@@ -57,17 +88,6 @@
                 </div>
             </div>
         </div>
-        <div id="headerMovie" data-property="{
-            videoURL:'hsldv0kx_-E',
-            containment:'body', 
-            showControls:false, 
-            autoPlay:true, 
-            loop:true, 
-            mute:true, 
-            startAt:0, 
-            opacity:1, 
-            addRaster:true, 
-            quality:'default'}">My video01</div>
     </div>
 </div>
 
@@ -76,7 +96,7 @@
     <div class="row">
         <div class="col-1 col-sm-4 bg-filter"></div>
         <div class="col-11 col-sm-8 bg-blank p-1" style="height: 100px;">
-            <div class="context__headline">
+            <div class="context__headline scroll-animation fadein-right">
                 <p class="text-light h2">きつねび</p>
                 <div class="p-2 bg-white">
                     <ul class="m-1" style="list-style: none;">
@@ -90,42 +110,38 @@
         <div class="col-12 bg-blank d-block d-sm-none" style="height:95px;"></div>
         <div class="col-12 bg-blank d-none d-sm-block" style="height:60px;"></div>
         <div class="col-12 bg-blank p-0">
-            <div class="context__title text-light py-1 pr-5 d-block d-xl-none" style="width: 160px;">
+            <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 160px;">
                 <h1 class="text-right">Style</h1>
             </div>
-            <div class="context__title text-light py-1 pr-5 d-none d-xl-block" style="width: 400px;">
+            <div class="context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-left" style="width: 400px;">
                 <h1 class="text-right">Style</h1>
             </div>
-            <div class="m-3">
+            <div class="m-3 scroll-animation text-fadein">
                 <p class="mx-4">『きつねび』は、既存の枠組みに囚われず、新しい楽しみ方を追求します。</p>
                 <p class="mx-4">バンケの後半15分では、外のマップに遠足に行く事もよくあり、自由奔放なギルドです。メンバーを見かけたら仲良くしたってください。</p>
             </div>
         </div>
         <div class="col-12 bg-blank p-0" style="height: 50px;">
-            <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none" style="width: 300px;">
+            <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 300px;">
                 <h1 class="ml-5">Gallery</h1>
             </div>
-            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block" style="width: 400px;">
+            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 400px;">
                 <h1 class="ml-5">Gallery</h1>
             </div>
         </div>
         <div class="col-11 bg-blank p-0">
             <div id="photoCarousel" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators"  style="bottom:-50px;">
-                <li data-target="#photoCarousel" class="bg-lightblack active" data-slide-to="0"></li>
-                <li data-target="#photoCarousel" class="bg-lightblack" data-slide-to="1"></li>
-                <li data-target="#photoCarousel" class="bg-lightblack" data-slide-to="2"></li>
+                <?php foreach ($galleryList as $key => $value) :?>
+                <li data-target="#photoCarousel" class="bg-lightblack<?php if($key === 0) echo ' active'?>" data-slide-to="<?php echo $key; ?>"></li>
+                <?php endforeach; ?>
               </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="/assets/images/activity_1.png">
+              <div class="carousel-inneri scroll-animation fadein-left" style="height:55vw";>
+                <?php foreach ($galleryList as $key => $value) :?>
+                <div class="carousel-item<?php if($key === 0) echo ' active'?>">
+                    <img class="d-block w-100" src="<?php echo($value); ?>">
                 </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/assets/images/activity_2.jpg">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/assets/images/activity_3.png">
-                </div>
+                <?php endforeach; ?>
               </div>
               <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -171,8 +187,9 @@
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
 
 <script>
+
     /* youtubeの動画再生 */
-    $('#headerMovie').YTPlayer();
+    $('#backMovie').YTPlayer();
 
     /* ヘッダーの文字のアニメーション */
     var texts = $('.text-switch');
@@ -184,6 +201,28 @@
         texts.eq(textIndex % texts.length).delay(2000).fadeIn(2000).delay(3000).fadeOut(2000, switchText);
     }
     switchText();
+
+    /* スクロールし表示範囲に入ったら scroll-animationクラスにアクティブを付与する */
+    function scrollChk(){
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        jQuery('.scroll-animation').not('.active').each(function(){
+            var pos = $(this).offset().top;
+
+            if (scroll > pos - (windowHeight * 0.9)){
+                $(this).addClass("active");
+            }
+        });
+    }
+    $(window).scroll(function (){
+        scrollChk();
+    });
+    $('body').on('touchmove', function() {
+        scrollChk();
+    });
+
+
 </script>
 
 </body>
