@@ -210,7 +210,7 @@
         jQuery('.scroll-animation').not('.active').each(function(){
             var pos = $(this).offset().top;
 
-            if (scroll > pos - (windowHeight * 0.9)){
+            if (scroll > pos - (windowHeight * 0.95)){
                 $(this).addClass("active");
             }
         });
