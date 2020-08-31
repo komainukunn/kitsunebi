@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://kitsunebi-maple.herokuapp.com/" /> <!--ページURL-->
 <meta property="og:title" content="きつねび" /> <!--記事タイトル-->
 <meta property="og:description" content="メイプルストーリーMかりん鯖で活動しているギルドきつねびの紹介ページです！" /> <!--ディスクリプション-->
-<meta property="og:image" content="https://kitsunebi-maple.herokuapp.com/assets/images/activity_2.jpg" /> <!-- 画像URL -->
+<meta property="og:image" content="https://kitsunebi-maple.herokuapp.com/assets/images/og_image.jpg" /> <!-- 画像URL -->
 
 <title>きつねび</title>
 
@@ -54,14 +54,14 @@
 <div class="animation"><img src="<?php echo $loadImage;?>"></div>
 </div>
 <div id="backMovie" data-property="{
-    videoURL:'3tpSYpwoy8Y',
+    videoURL:'tSE6BBF6zqU',
     containment:'body', 
     showControls:false, 
     autoPlay:true, 
     loop:true, 
     mute:true, 
     startAt:0, 
-    stopAt: 35,
+    stopAt: 40,
     opacity:1, 
     addRaster:true, 
     quality:'default',
@@ -185,6 +185,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+<!-- <script src="assets/js/inobounce.min.js"></script> -->
 
 <script>
 
@@ -198,7 +199,7 @@
     
     function switchText() {
         textIndex++;
-        texts.eq(textIndex % texts.length).delay(2000).fadeIn(2000).delay(3000).fadeOut(2000, switchText);
+        texts.eq(textIndex % texts.length).delay(1000).fadeIn(1000).delay(1500).fadeOut(1000, switchText);
     }
     switchText();
 

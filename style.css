@@ -26,10 +26,12 @@
   }
 }
 
+
 html, body{
     overflow-x: hidden;
     overflow-y: hidden;
     overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .header__movie{
