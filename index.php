@@ -44,7 +44,7 @@
 <body>
 
 <div class="loading">
-<div class="animation"><img src="<?php echo $loadImage;?>"></div>
+    <div class="animation w-100"><img class="img-fluid w-100" src="<?php echo $loadImage;?>"></div>
 </div>
 <div id="backMovie" data-property="{
     videoURL:'tSE6BBF6zqU',
