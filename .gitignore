@@ -8,3 +8,6 @@ Icon
 docker-compose.yaml
 nginx/
 php/
+
+### other ###
+env.inc

@@ -2,6 +2,11 @@
     if(empty(getenv('PHP_TEST'))){
         require('config.php');
     }
+
+    /* 共通関数郡を読みこむ */
+    require('./unit/common.php');
+    $members = getMemberList() ?: [];
+    $mamberBlankCount = 3-(count($members) % 3);
     
     /* ローディング画面 画像選定 */
     $loadImageList = glob('./assets/images/loading/*.*');
@@ -125,7 +130,7 @@
         <div class="col-11 bg-blank p-0">
             <div id="photoCarousel" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators"  style="bottom:-50px;">
-                <?php foreach ($galleryList as $key => $value) :?>
+                <?php foreach($galleryList as $key => $value) :?>
                 <li data-target="#photoCarousel" class="bg-lightblack<?php if($key === 0) echo ' active'?>" data-slide-to="<?php echo $key; ?>"></li>
                 <?php endforeach; ?>
               </ol>
@@ -147,7 +152,28 @@
             </div>
         </div>
         <div class="col-1 bg-blank"></div>
-        <div class="col-12 bg-blank" style="height: 200px;"></div>
+        <div class="col-12 bg-blank" style="height: 50px;"></div>
+        <div class="col-12 bg-blank p-0">
+            <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">
+                <h1 class="text-right">Member</h1>
+            </div>
+            <div class="context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-left" style="width: 500px;">
+                <h1 class="text-right">Member</h1>
+            </div>
+            <div style="height:50px;"></div>
+        </div>
+        <?php foreach($members as $key => $value) :?>
+        <div class="col-4 bg-blank">
+            <div class="text-center">
+            <a href="<?= $value['url'] ?>" target="_blank"><img class="rounded-circle img-fluid" src="<?= $value['image'] ?>"></a>
+            <p><?= $value['name'] ?></p>
+            </div>
+        </div>
+        <?php endforeach; ?>
+        <?php for($i=0;$i<$mamberBlankCount;$i++) :?>
+            <div class="col-4 bg-blank"></div>
+        <?php endfor; ?>
+        <div  class="col-12 bg-blank" style="height:50px;"></div>
         <div class="col-12 bg-filter" style="height: 70vh;">
             <div class="h1 font-weight-bold text-light centering m-0 text-center" style="height: 70vh;">
                 <p class="text-switch">共に笑い</p>
