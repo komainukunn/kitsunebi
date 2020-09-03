@@ -3,4 +3,8 @@
      * heroku config:set PHP_TEST=koma-test --app kitsunebi-maple 
      **/
     //putenv('PHP_TEST=テスト');
-?>
+
+    /*
+     * heroku config:set TWITTER_API_KEY= --app kitsunebi-maple
+     */
+    putenv('TWITTER_API_KEY=');

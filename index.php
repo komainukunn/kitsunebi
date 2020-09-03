@@ -1,6 +1,6 @@
 <?php
     if(empty(getenv('PHP_TEST'))){
-        require('config.php');
+        require('config.inc');
     }
 
     /* 共通関数郡を読みこむ */
