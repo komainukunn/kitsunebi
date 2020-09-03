@@ -44,7 +44,7 @@
 <body>
 
 <div class="loading">
-    <div class="animation centering w-100"><img class="img-fluid" style="max-height: 700px;" src="<?php echo $loadImage;?>"></div>
+    <div class="animation centering w-100"><img class="img-fluid" style="max-height: 70vh;" src="<?php echo $loadImage;?>"></div>
 </div>
 <div id="backMovie" data-property="{
     videoURL:'tSE6BBF6zqU',
@@ -74,7 +74,7 @@
                     <p class="h1 font-weight-bold d-block d-sm-none">GUILD<br />INTRODUCTION</p>
                     <p class="display-4 font-weight-bold d-none d-sm-block">GUILD<br />INTRODUCTION</p>
                     <hr class="bg-white m-0" style="min-width:300px; width:75vw;">
-                    <p>Kitsunebe active in Maple Story M</p>
+                    <p>Kitsunebi active in Maple Story M</p>
                 </div>
                 <div class="header__message__footer">
                     <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
