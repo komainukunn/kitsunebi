@@ -10,4 +10,4 @@ nginx/
 php/
 
 ### other ###
-env.inc
+config.inc
