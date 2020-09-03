@@ -64,7 +64,10 @@
     addRaster:true, 
     quality:'default',
     onReady: function(player){
-            $('.loading').hide();
+            $('.loading').show().delay(3000).queue(function (next) {
+                $(this).hide();
+                next();
+            });
             $('html,body').css('overflow-y','visible');
         }
     }">My video01</div>
