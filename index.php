@@ -5,8 +5,6 @@
 
     /* 共通関数郡を読みこむ */
     require('./unit/common.php');
-    $members = getMemberList() ?: [];
-    $mamberBlankCount = 3-(count($members) % 3);
     
     /* ローディング画面 画像選定 */
     $loadImageList = glob('./assets/images/loading/*.*');
@@ -47,7 +45,6 @@
 
 </head>
 <body>
-
 <div class="loading">
     <div class="animation centering w-100"><img class="img-fluid" style="max-height: 70vh;" src="<?php echo $loadImage;?>"></div>
 </div>
@@ -66,11 +63,12 @@
     onReady: function(player){
             $('.loading').show().delay(3000).queue(function (next) {
                 $(this).hide();
+                $('html,body').css('overflow-y','visible');
                 next();
             });
-            $('html,body').css('overflow-y','visible');
         }
-    }">My video01</div>
+    }">My video
+</div>
 <div>
     <div>
         <div class="header__movie" style="height:100vh">
@@ -93,7 +91,9 @@
 </div>
 
 
-<div class="container-fluid" style="max-width 1110">
+
+
+<div id="app" class="container-fluid" style="max-width 1110">
     <div class="row">
         <div class="col-1 col-sm-4 bg-filter"></div>
         <div class="col-11 col-sm-8 bg-blank p-1" style="height: 100px;">
@@ -123,10 +123,47 @@
             </div>
         </div>
         <div class="col-12 bg-blank p-0" style="height: 50px;">
+            <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 200px;">
+                <h1 class="ml-5">Article</h1>
+            </div>
+            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 400px;">
+                <h1 class="ml-5">Article</h1>
+            </div>
+        </div>
+        <div class="col-12 bg-blank" style="height: 40px;"></div>
+        <div class="col-12 col-md-6 bg-blank centering-x" id="article-1">
+            <!-- Twitterの埋め込みダミー  -->
+            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日のバンケは園児＋ライディングで遊びました🙌<a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a> <a href="https://t.co/xoOVnU9Jlq">pic.twitter.com/xoOVnU9Jlq</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1299137947539652609?ref_src=twsrc%5Etfw">August 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-12 col-md-6 bg-blank centering-x" id="article-2">
+            <!-- Twitterの埋め込みダミー  -->
+            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しい事をしたい人、ゆるくやりたい人、初心者は必見！！<br><br>「きつねび」は、こんなギルドです！<br><br>🦊要塞戦なし<br>🦊遠征は各自<br>🦊バンケ 2日に1回 22:30〜<br>🦊メインキャラのみ<br>🦊初心者 多数<br>🦊誰とでも仲良く<br><br>“道なき道を照らす灯火となれ”<a href="https://twitter.com/hashtag/%E3%81%8B%E3%82%8A%E3%82%93%E9%AF%96?src=hash&amp;ref_src=twsrc%5Etfw">#かりん鯖</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a><a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://t.co/A5hCryK2CL">https://t.co/A5hCryK2CL</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1239520979635671042?ref_src=twsrc%5Etfw">March 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-12 bg-blank" style="height: 40px;"></div>
+        <div class="col-12 bg-blank p-0">
+            <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">
+                <h1 class="text-right">Member</h1>
+            </div>
+            <div class="context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-left" style="width: 500px;">
+                <h1 class="text-right">Member</h1>
+            </div>
+            <div style="height:50px;"></div>
+        </div>
+        <div class="col-4 bg-blank" v-for="member in members">
+            <div class="text-center">
+            <a :href=member.url target="_blank"><img class="rounded-circle img-fluid" :src=member.image width="100" height="100"></a>
+            <p>{{member.name}}</p>
+            </div>
+        </div>
+        <div class="col-4 bg-blank" v-for="n in 3-(members.length % 3)" ></div>
+        <div class="col-12 bg-blank px-2" style="height:70px;">
+            <p>※他にもメンバーが多数在籍してます！！</p>
+        </div>
+        <div class="col-12 bg-blank p-0" style="height: 50px;">
             <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 300px;">
                 <h1 class="ml-5">Gallery</h1>
             </div>
-            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 400px;">
+            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 600px;">
                 <h1 class="ml-5">Gallery</h1>
             </div>
         </div>
@@ -137,7 +174,7 @@
                 <li data-target="#photoCarousel" class="bg-lightblack<?php if($key === 0) echo ' active'?>" data-slide-to="<?php echo $key; ?>"></li>
                 <?php endforeach; ?>
               </ol>
-              <div class="carousel-inneri scroll-animation fadein-left" style="height:55vw";>
+              <div class="carousel-inneri scroll-animation fadein-left" style="height:55vw">
                 <?php foreach ($galleryList as $key => $value) :?>
                 <div class="carousel-item<?php if($key === 0) echo ' active'?>">
                     <img class="d-block w-100" src="<?php echo($value); ?>">
@@ -155,37 +192,8 @@
             </div>
         </div>
         <div class="col-1 bg-blank"></div>
-        <div class="col-12 bg-blank" style="height: 50px;"></div>
-        <div class="col-12 bg-blank p-0">
-            <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">
-                <h1 class="text-right">Member</h1>
-            </div>
-            <div class="context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-left" style="width: 500px;">
-                <h1 class="text-right">Member</h1>
-            </div>
-            <div style="height:50px;"></div>
-        </div>
-        <?php foreach($members as $key => $value) :?>
-        <div class="col-4 bg-blank">
-            <div class="text-center">
-            <a href="<?= $value['url'] ?>" target="_blank"><img class="rounded-circle img-fluid" src="<?= $value['image'] ?>"></a>
-            <p><?= $value['name'] ?></p>
-            </div>
-        </div>
-        <?php endforeach; ?>
-        <?php for($i=0;$i<$mamberBlankCount;$i++) :?>
-            <div class="col-4 bg-blank"></div>
-        <?php endfor; ?>
-        <div  class="col-12 bg-blank" style="height:50px;"></div>
-        <div class="col-12 bg-filter" style="height: 70vh;">
-            <div class="h1 font-weight-bold text-light centering m-0 text-center" style="height: 70vh;">
-                <p class="text-switch">共に笑い</p>
-                <p class="text-switch">時には戦い</p>
-                <p class="text-switch">面白おかしく<br>毎日を過ごす</p>
-                <p class="text-switch">さあ</p>
-                <p class="text-switch">道無き道を照らす<br>灯火となろう</p>
-            </div>
-        </div>
+        <div class="col-12 bg-blank" style="height: 100px;"></div>
+        <div class="col-12 bg-filter" style="height: 70vh;"></div>
         <div class="col-12 bg-blank  p-5">
             <div class="text-center">
                 <h1>コンタクト</h1>
@@ -198,7 +206,6 @@
     </div>
 </div>
 
-</div>
 <!--javascript -->
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -206,6 +213,8 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
 <!-- <script src="assets/js/inobounce.min.js"></script> -->
 
@@ -213,17 +222,6 @@
 
     /* youtubeの動画再生 */
     $('#backMovie').YTPlayer();
-
-    /* ヘッダーの文字のアニメーション */
-    var texts = $('.text-switch');
-    let textIndex = -1;
-    texts.hide();
-    
-    function switchText() {
-        textIndex++;
-        texts.eq(textIndex % texts.length).delay(1000).fadeIn(1000).delay(1500).fadeOut(1000, switchText);
-    }
-    switchText();
 
     /* スクロールし表示範囲に入ったら scroll-animationクラスにアクティブを付与する */
     function scrollChk(){
@@ -243,6 +241,40 @@
     });
     $('body').on('touchmove', function() {
         scrollChk();
+    });
+
+    /* vueの処理*/
+    var app = new Vue({
+        el: '#app',
+        data:{
+            members: [],
+            articles: [],
+        },
+        methods:{
+            getMember: function(){
+                var self = this;
+                axios.get('./api/member.php').then(function (res){
+                    self.members = res.data;
+                }).catch(function (err){
+                    console.log('err:', err);
+                });
+            },
+            getArticle: function(){
+                var self = this;
+                axios.get('./api/article.php').then(function (res){
+                    self.articles = res.data;
+                    for(i=0;i<self.articles.length;i++){
+                        $("#article-"+(i+1)).html(self.articles[i].html);
+                    }
+                }).catch(function (err){
+                    console.log('err:', err);
+                });
+            },
+        },
+        mounted: function(){
+            this.getMember();
+            this.getArticle();
+        },
     });
 
 
