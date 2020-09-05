@@ -156,14 +156,16 @@
             <div style="height:50px;"></div>
         </div>
         <div class="col-4 bg-blank" v-for="member in members">
-            <div class="text-center">
-            <a :href=member.url target="_blank"><img class="rounded-circle img-fluid" :src=member.image width="100" height="100"></a>
-            <p>{{member.name}}</p>
+            <div class="text-center scroll-animation fadein-bottom">
+                <a :href=member.url target="_blank"><img class="rounded-circle img-fluid" :src=member.image width="100" height="100"></a>
+                <p>{{member.name}}</p>
             </div>
         </div>
         <div class="col-4 bg-blank" v-for="n in 3-(members.length % 3)" ></div>
         <div class="col-12 bg-blank px-2" style="height:70px;">
-            <p>※他にもメンバーが多数在籍してます！！</p>
+            <div class="scroll-animation text-fadein">
+                <p>※他にもメンバーが多数在籍してます！！</p>
+            </div>
         </div>
         <div class="col-12 bg-blank p-0" style="height: 50px;">
             <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 300px;">
