@@ -131,15 +131,21 @@
             </div>
         </div>
         <div class="col-12 bg-blank" style="height: 40px;"></div>
-        <div class="col-12 col-md-6 bg-blank centering-x" id="article-1">
-            <!-- Twitterの埋め込みダミー  -->
-            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日のバンケは園児＋ライディングで遊びました🙌<a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a> <a href="https://t.co/xoOVnU9Jlq">pic.twitter.com/xoOVnU9Jlq</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1299137947539652609?ref_src=twsrc%5Etfw">August 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-12 col-md-6 bg-blank">
+            <div class="w-100 centering-x scroll-animation fadein-left" id="article-1" >
+                <!-- Twitterの埋め込みダミー  -->
+                <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">昨日のバンケは園児＋ライディングで遊びました🙌<a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a> <a href="https://t.co/xoOVnU9Jlq">pic.twitter.com/xoOVnU9Jlq</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1299137947539652609?ref_src=twsrc%5Etfw">August 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
-        <div class="col-12 col-md-6 bg-blank centering-x" id="article-2">
-            <!-- Twitterの埋め込みダミー  -->
-            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しい事をしたい人、ゆるくやりたい人、初心者は必見！！<br><br>「きつねび」は、こんなギルドです！<br><br>🦊要塞戦なし<br>🦊遠征は各自<br>🦊バンケ 2日に1回 22:30〜<br>🦊メインキャラのみ<br>🦊初心者 多数<br>🦊誰とでも仲良く<br><br>“道なき道を照らす灯火となれ”<a href="https://twitter.com/hashtag/%E3%81%8B%E3%82%8A%E3%82%93%E9%AF%96?src=hash&amp;ref_src=twsrc%5Etfw">#かりん鯖</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a><a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://t.co/A5hCryK2CL">https://t.co/A5hCryK2CL</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1239520979635671042?ref_src=twsrc%5Etfw">March 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-12 col-md-6 bg-blank">
+            <div class="w-100 centering-x scroll-animation fadein-right" id="article-2" >
+                <!-- Twitterの埋め込みダミー  -->
+                <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しい事をしたい人、ゆるくやりたい人、初心者は必見！！<br><br>「きつねび」は、こんなギルドです！<br><br>🦊要塞戦なし<br>🦊遠征は各自<br>🦊バンケ 2日に1回 22:30〜<br>🦊メインキャラのみ<br>🦊初心者 多数<br>🦊誰とでも仲良く<br><br>“道なき道を照らす灯火となれ”<a href="https://twitter.com/hashtag/%E3%81%8B%E3%82%8A%E3%82%93%E9%AF%96?src=hash&amp;ref_src=twsrc%5Etfw">#かりん鯖</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a><a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://t.co/A5hCryK2CL">https://t.co/A5hCryK2CL</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1239520979635671042?ref_src=twsrc%5Etfw">March 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
-        <div class="col-12 bg-blank" style="height: 40px;"></div>
+        <div class="col-12 bg-blank py-3 px-5" style="height: 70px;">
+            <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">もっと見る>></a>
+        </div>
         <div class="col-12 bg-blank p-0">
             <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">
                 <h1 class="text-right">Member</h1>
