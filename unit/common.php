@@ -36,7 +36,7 @@
         foreach($userList->users as $value){
             $result[] = [
                 'name'  => $value->name,
-                'image' => !empty($value->profile_image_url_https) ? str_replace('_normal','',$value->profile_image_url) : './assets/no_image.jpg',
+                'image' => !empty($value->profile_image_url_https) ? str_replace('_normal','',$value->profile_image_url_https) : './assets/no_image.jpg',
                 'url' => 'https://twitter.com/'.$value->screen_name,
                 'id' => $value->screen_name, 
             ];
