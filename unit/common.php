@@ -22,6 +22,8 @@
     
         /* リクエストを実行 */
         $response = curl_exec($ch);
+        //return json_decode($response);
+        
     
         /* エラーの場合 falseを返す */
         if (curl_errno($ch)) {
@@ -34,7 +36,7 @@
         foreach($userList->users as $value){
             $result[] = [
                 'name'  => $value->name,
-                'image' => !empty($value->profile_image_url) ? str_replace('_normal','',$value->profile_image_url) : './assets/no_image.jpg',
+                'image' => !empty($value->profile_image_url_https) ? str_replace('_normal','',$value->profile_image_url) : './assets/no_image.jpg',
                 'url' => 'https://twitter.com/'.$value->screen_name,
                 'id' => $value->screen_name, 
             ];
