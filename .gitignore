@@ -12,3 +12,4 @@ php/
 ### other ###
 config.inc
 vendor/
+chache/

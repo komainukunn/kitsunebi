@@ -22,7 +22,6 @@
     
         /* リクエストを実行 */
         $response = curl_exec($ch);
-        //return json_decode($response);
         
     
         /* エラーの場合 falseを返す */
@@ -42,7 +41,7 @@
             ];
         }
     
-        return $result;
+        return getCacheContents($result,dirname(dirname(__FILE__)).'/chache/member.json');
     }
 
     /* 記事情報を取得 */
@@ -90,7 +89,7 @@
             $result[] = getTweetElement($url);
         }
     
-        return $result;
+        return getCacheContents($result,dirname(dirname(__FILE__)).'/chache/article.json');
     }
 
     function getTweetElement($tweet){
@@ -109,11 +108,29 @@
 
         /* リクエストを実行 */
         $response = curl_exec($ch);
-        return json_decode($response);
 
         /* エラーの場合 falseを返す */
         if (curl_errno($ch)) {
             return [];
         }
+        
+        return json_decode($response);
 
+    }
+
+    function getCacheContents($arr, $cachePath, $cacheLimit = 86400) {
+        //もし配列が空だったら、キャッシュからjsonを取得
+        if(empty($arr)){
+            $tmp = file_get_contents($cachePath);
+            $arr =  json_decode($tmp);
+
+        //空じゃない場合はキャッシュ時間を過ぎている場合はキャッシュ更新
+        }else{
+            if(!file_exists($cachePath) || filemtime($cachePath) + $cacheLimit < time()){
+                $tmp = json_encode($arr);
+                file_put_contents($cachePath, $tmp, LOCK_EX); // キャッシュに保存
+            }
+        }
+        //配列を返す
+        return $arr;
     }
