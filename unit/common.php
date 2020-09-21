@@ -118,7 +118,14 @@
 
     }
 
+    //APIのキャッシュを作成
     function getCacheContents($arr, $cachePath, $cacheLimit = 86400) {
+
+        if(!file_exists(dirname($cachePath))){
+            mkdir(dirname($cachePath), 0777);
+            chmod(dirname($cachePath), 0777);
+        }
+
         //もし配列が空だったら、キャッシュからjsonを取得
         if(empty($arr)){
             $tmp = file_get_contents($cachePath);
