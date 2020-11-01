@@ -48,19 +48,15 @@
     function getArticleList(){
         
         //メンバー情報取得
-        $members = getMemberList();
-        $searchMemberList = [];
-        foreach($members as $member){
-            $searchMemberList[] = 'from:'.$member['id'];
-        }
+        $members = array_column (getMemberList(),"id");
 
         /* 送信する情報を作成 */
         $url = 'https://api.twitter.com/1.1/search/tweets.json';
         $params = [
-            'q' => '#きつねび AND ( '.implode(' OR ',$searchMemberList).' ) -RT',
+            'q' => '#きつねび -RT',
             'lang' => 'ja',
             'result_type' => 'recent',
-            'count' => '2',
+            'count' => '50',
         ];
         $header = 'Authorization: Bearer '.getenv('TWITTER_API_KEY');
         $ch = curl_init();
@@ -85,11 +81,14 @@
         $articleList = json_decode($response);
         $result = [];
         foreach($articleList->statuses as $value){
+            if(!in_array($value->user->screen_name, $members)){
+                continue;
+            }
             $url = "https://twitter.com/".$value->user->screen_name."/status/".$value->id;
             $result[] = getTweetElement($url);
         }
     
-        return getCacheContents($result,dirname(dirname(__FILE__)).'/chache/article.json');
+       return getCacheContents($result,dirname(dirname(__FILE__)).'/chache/article.json');
     }
 
     function getTweetElement($tweet){
