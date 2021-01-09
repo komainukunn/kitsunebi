@@ -23,25 +23,12 @@
 <head>
 <meta charset="utf-8" />
 
-<!-- Twitter サムネ-->
-<meta name="twitter:card" content="summary_large_image" /> <!--Twitterのサムネのタイプ指定-->
-<meta name="twitter:site" content="@komainu_maple" /> <!--Twitterアカウント-->
-<meta property="og:url" content="https://kitsunebi-maple.herokuapp.com/" /> <!--ページURL-->
-<meta property="og:title" content="きつねび" /> <!--記事タイトル-->
-<meta property="og:description" content="メイプルストーリーMかりん鯖で活動しているギルドきつねびの紹介ページです！" /> <!--ディスクリプション-->
-<meta property="og:image" content="https://kitsunebi-maple.herokuapp.com/assets/images/og_image.jpg" /> <!-- 画像URL -->
-
+<!-- meta -->
+<?php include('./assets/php/meta.php'); ?>
 <title>きつねび</title>
 
-<!-- meta -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-
 <!-- css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css" media="screen"/>
+<?php include('./assets/php/css.php'); ?>
 
 </head>
 <body>
@@ -190,16 +177,8 @@
 </div>
 
 <!--javascript -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<?php include('./assets/php/script.php'); ?>
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-<!-- <script src="assets/js/inobounce.min.js"></script> -->
 
 <script>
 
