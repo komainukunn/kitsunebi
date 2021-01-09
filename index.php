@@ -143,6 +143,14 @@
                 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しい事をしたい人、ゆるくやりたい人、初心者は必見！！<br><br>「きつねび」は、こんなギルドです！<br><br>🦊要塞戦なし<br>🦊遠征は各自<br>🦊バンケ 2日に1回 22:30〜<br>🦊メインキャラのみ<br>🦊初心者 多数<br>🦊誰とでも仲良く<br><br>“道なき道を照らす灯火となれ”<a href="https://twitter.com/hashtag/%E3%81%8B%E3%82%8A%E3%82%93%E9%AF%96?src=hash&amp;ref_src=twsrc%5Etfw">#かりん鯖</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a><a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://t.co/A5hCryK2CL">https://t.co/A5hCryK2CL</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1239520979635671042?ref_src=twsrc%5Etfw">March 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
+        <div class="col-12 col-md-6 bg-blank">
+            <div class="w-100 centering-x scroll-animation fadein-left" id="article-3" >
+            </div>
+        </div>
+        <div class="col-12 col-md-6 bg-blank">
+            <div class="w-100 centering-x scroll-animation fadein-left" id="article-4" >
+            </div>
+        </div>
         <div class="col-12 bg-blank py-3 px-5" style="height: 70px;">
             <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">もっと見る>></a>
         </div>
@@ -167,39 +175,6 @@
                 <p>※他にもメンバーが多数在籍してます！！</p>
             </div>
         </div>
-        <div class="col-12 bg-blank p-0" style="height: 50px;">
-            <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 300px;">
-                <h1 class="ml-5">Gallery</h1>
-            </div>
-            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 600px;">
-                <h1 class="ml-5">Gallery</h1>
-            </div>
-        </div>
-        <div class="col-11 bg-blank p-0">
-            <div id="photoCarousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators"  style="bottom:-50px;">
-                <?php foreach($galleryList as $key => $value) :?>
-                <li data-target="#photoCarousel" class="bg-lightblack<?php if($key === 0) echo ' active'?>" data-slide-to="<?php echo $key; ?>"></li>
-                <?php endforeach; ?>
-              </ol>
-              <div class="carousel-inneri scroll-animation fadein-left" style="height:55vw">
-                <?php foreach ($galleryList as $key => $value) :?>
-                <div class="carousel-item<?php if($key === 0) echo ' active'?>">
-                    <img class="d-block w-100" src="<?php echo($value); ?>">
-                </div>
-                <?php endforeach; ?>
-              </div>
-              <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#photoCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </div>
-        <div class="col-1 bg-blank"></div>
         <div class="col-12 bg-blank" style="height: 100px;"></div>
         <div class="col-12 bg-filter" style="height: 70vh;"></div>
         <div class="col-12 bg-blank  p-5">
