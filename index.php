@@ -14,7 +14,7 @@
         $loadImage = $loadImageList[mt_rand(1,count($loadImageList))-1];
     }
 
-    $galleryList = glob('./assets/images/gallery/*.*'); 
+    //$galleryList = glob('./assets/images/gallery/*.*'); 
 
 ?>
 
