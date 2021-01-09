@@ -4,11 +4,6 @@
 .LSOverride
 Icon
 
-### docker ###
-docker-compose.yaml
-nginx/
-php/
-
 ### other ###
 config.inc
 vendor/
