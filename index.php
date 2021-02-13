@@ -36,7 +36,7 @@
     <div class="animation centering w-100"><img class="img-fluid" style="max-height: 70vh;" src="<?php echo $loadImage;?>"></div>
 </div>
 <div id="backMovie" data-property="{
-    videoURL:'tSE6BBF6zqU',
+    videoURL:'wgfL41OxMww',
     containment:'body', 
     showControls:false, 
     autoPlay:true, 
@@ -130,16 +130,20 @@
                 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しい事をしたい人、ゆるくやりたい人、初心者は必見！！<br><br>「きつねび」は、こんなギルドです！<br><br>🦊要塞戦なし<br>🦊遠征は各自<br>🦊バンケ 2日に1回 22:30〜<br>🦊メインキャラのみ<br>🦊初心者 多数<br>🦊誰とでも仲良く<br><br>“道なき道を照らす灯火となれ”<a href="https://twitter.com/hashtag/%E3%81%8B%E3%82%8A%E3%82%93%E9%AF%96?src=hash&amp;ref_src=twsrc%5Etfw">#かりん鯖</a><a href="https://twitter.com/hashtag/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%ABM?src=hash&amp;ref_src=twsrc%5Etfw">#メイプルM</a><a href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hash&amp;ref_src=twsrc%5Etfw">#きつねび</a><a href="https://t.co/A5hCryK2CL">https://t.co/A5hCryK2CL</a></p>&mdash; こまいぬkunn@すもも🃏 (@komainu_maple) <a href="https://twitter.com/komainu_maple/status/1239520979635671042?ref_src=twsrc%5Etfw">March 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
-        <div class="col-12 col-md-6 bg-blank">
-            <div class="w-100 centering-x scroll-animation fadein-left" id="article-3" >
-            </div>
-        </div>
-        <div class="col-12 col-md-6 bg-blank">
-            <div class="w-100 centering-x scroll-animation fadein-left" id="article-4" >
-            </div>
-        </div>
         <div class="col-12 bg-blank py-3 px-5" style="height: 70px;">
-            <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">もっと見る>></a>
+            <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">ツイートをもっと見る>></a>
+        </div>
+        <div class="col-12 col-md-6 bg-blank centering-x pb-5">
+          <div class="card">
+            <img class="card-img-top" src="/assets/images/beginner.jpg" alt="初心者必見">
+            <div class="card-body">
+              <h5 class="card-title">ビギナー向け情報</h5>
+              <p class="card-text">レベリングのコツや小技などをまとめたページです！ぜひご活用ください！！</p>
+              <a href="./beginner" class="btn btn-primary">ページへ</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 bg-blank">
         </div>
         <div class="col-12 bg-blank p-0">
             <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">

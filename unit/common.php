@@ -32,7 +32,7 @@
         /* 必要なデータのみを抜き出す */ 
         $userList = json_decode($response);
         $result = [];
-        foreach($userList->users as $value){
+        foreach((array)$userList->users as $value){
             $result[] = [
                 'name'  => $value->name,
                 'image' => !empty($value->profile_image_url_https) ? str_replace('_normal','',$value->profile_image_url_https) : './assets/no_image.jpg',
@@ -80,7 +80,7 @@
         /* 必要なデータのみを抜き出す */ 
         $articleList = json_decode($response);
         $result = [];
-        foreach($articleList->statuses as $value){
+        foreach((array)$articleList->statuses as $value){
             if(!in_array($value->user->screen_name, $members)){
                 continue;
             }

@@ -29,8 +29,10 @@
 
 html, body{
     overflow-x: hidden;
+    /*
     overflow-y: hidden;
     overscroll-behavior-y: none;
+    */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -106,6 +108,10 @@ html, body{
 
 .bg-green{
     background:#2B8C69 !important;
+}
+
+.img-filter{
+  opacity:0.7;
 }
 
 .display-5 {

@@ -6,6 +6,7 @@ Icon
 
 ### other ###
 config.inc
+env.inc
 vendor/
 chache/*
 !.gitkeep
