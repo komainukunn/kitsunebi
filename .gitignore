@@ -4,13 +4,9 @@
 .LSOverride
 Icon
 
-### docker ###
-docker-compose.yaml
-nginx/
-php/
-
 ### other ###
 config.inc
+env.inc
 vendor/
 chache/*
 !.gitkeep

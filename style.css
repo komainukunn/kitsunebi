@@ -29,8 +29,10 @@
 
 html, body{
     overflow-x: hidden;
+    /*
     overflow-y: hidden;
     overscroll-behavior-y: none;
+    */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -67,6 +69,12 @@ html, body{
     justify-content: center;
 }
 
+.header__img{
+    width: 100%;
+    opacity: 0.1;
+    object-fit: cover;
+}
+
 .context__headline{
     background-color: #25594B;
     height: 200px;
@@ -96,6 +104,14 @@ html, body{
 
 .bg-lightblack{
     background-color: #202426 !important;
+}
+
+.bg-green{
+    background:#2B8C69 !important;
+}
+
+.img-filter{
+  opacity:0.7;
 }
 
 .display-5 {

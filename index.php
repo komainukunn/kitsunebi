@@ -14,7 +14,7 @@
         $loadImage = $loadImageList[mt_rand(1,count($loadImageList))-1];
     }
 
-    $galleryList = glob('./assets/images/gallery/*.*'); 
+    //$galleryList = glob('./assets/images/gallery/*.*'); 
 
 ?>
 
@@ -23,25 +23,12 @@
 <head>
 <meta charset="utf-8" />
 
-<!-- Twitter サムネ-->
-<meta name="twitter:card" content="summary_large_image" /> <!--Twitterのサムネのタイプ指定-->
-<meta name="twitter:site" content="@komainu_maple" /> <!--Twitterアカウント-->
-<meta property="og:url" content="https://kitsunebi-maple.herokuapp.com/" /> <!--ページURL-->
-<meta property="og:title" content="きつねび" /> <!--記事タイトル-->
-<meta property="og:description" content="メイプルストーリーMかりん鯖で活動しているギルドきつねびの紹介ページです！" /> <!--ディスクリプション-->
-<meta property="og:image" content="https://kitsunebi-maple.herokuapp.com/assets/images/og_image.jpg" /> <!-- 画像URL -->
-
+<!-- meta -->
+<?php include('./assets/php/meta.php'); ?>
 <title>きつねび</title>
 
-<!-- meta -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-
 <!-- css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css" media="screen"/>
+<?php include('./assets/php/css.php'); ?>
 
 </head>
 <body>
@@ -49,7 +36,7 @@
     <div class="animation centering w-100"><img class="img-fluid" style="max-height: 70vh;" src="<?php echo $loadImage;?>"></div>
 </div>
 <div id="backMovie" data-property="{
-    videoURL:'tSE6BBF6zqU',
+    videoURL:'wgfL41OxMww',
     containment:'body', 
     showControls:false, 
     autoPlay:true, 
@@ -144,7 +131,19 @@
             </div>
         </div>
         <div class="col-12 bg-blank py-3 px-5" style="height: 70px;">
-            <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">もっと見る>></a>
+            <a class="pull-right" href="https://twitter.com/hashtag/%E3%81%8D%E3%81%A4%E3%81%AD%E3%81%B3?src=hashtag_click&f=live">ツイートをもっと見る>></a>
+        </div>
+        <div class="col-12 col-md-6 bg-blank centering-x pb-5">
+          <div class="card">
+            <img class="card-img-top" src="/assets/images/beginner.jpg" alt="初心者必見">
+            <div class="card-body">
+              <h5 class="card-title">ビギナー向け情報</h5>
+              <p class="card-text">レベリングのコツや小技などをまとめたページです！ぜひご活用ください！！</p>
+              <a href="./beginner" class="btn btn-primary">ページへ</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 bg-blank">
         </div>
         <div class="col-12 bg-blank p-0">
             <div class="context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-left" style="width: 260px;">
@@ -167,39 +166,6 @@
                 <p>※他にもメンバーが多数在籍してます！！</p>
             </div>
         </div>
-        <div class="col-12 bg-blank p-0" style="height: 50px;">
-            <div class="float-right context__title text-light py-1 pr-5 d-block d-xl-none scroll-animation fadein-right" style="width: 300px;">
-                <h1 class="ml-5">Gallery</h1>
-            </div>
-            <div class="float-right context__title text-light py-1 pr-5 d-none d-xl-block scroll-animation fadein-right" style="width: 600px;">
-                <h1 class="ml-5">Gallery</h1>
-            </div>
-        </div>
-        <div class="col-11 bg-blank p-0">
-            <div id="photoCarousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators"  style="bottom:-50px;">
-                <?php foreach($galleryList as $key => $value) :?>
-                <li data-target="#photoCarousel" class="bg-lightblack<?php if($key === 0) echo ' active'?>" data-slide-to="<?php echo $key; ?>"></li>
-                <?php endforeach; ?>
-              </ol>
-              <div class="carousel-inneri scroll-animation fadein-left" style="height:55vw">
-                <?php foreach ($galleryList as $key => $value) :?>
-                <div class="carousel-item<?php if($key === 0) echo ' active'?>">
-                    <img class="d-block w-100" src="<?php echo($value); ?>">
-                </div>
-                <?php endforeach; ?>
-              </div>
-              <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#photoCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </div>
-        <div class="col-1 bg-blank"></div>
         <div class="col-12 bg-blank" style="height: 100px;"></div>
         <div class="col-12 bg-filter" style="height: 70vh;"></div>
         <div class="col-12 bg-blank  p-5">
@@ -215,16 +181,8 @@
 </div>
 
 <!--javascript -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<?php include('./assets/php/script.php'); ?>
 <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
-<!-- <script src="assets/js/inobounce.min.js"></script> -->
 
 <script>
 
